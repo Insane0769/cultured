@@ -2,7 +2,7 @@ let fs = require('fs')
 let path = require('path')
 let fetch = require('node-fetch')
 let levelling = require('../lib/levelling')
-const thumb = fs.readFileSync('./src/thumb-1920-461825.png')
+const thumb = fs.readFileSync('./src/https___cdn.cnn.com_cnnnext_dam_assets_181227161503-vladimir-putin.jpg')
 let tags = {
   'main': 'MAIN',
   'info': 'INFO',
@@ -150,7 +150,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    conn.send2ButtonImg(m.chat, thumb, `🏮 I\'m Toman-Bot`, text.trim(), 'support', ':support', 'rules', ':rules', m)
+    conn.send2ButtonImg(m.chat, thumb, `🏮 I\'m Vladimir Botin`, text.trim(), 'support', ':support', 'rules', ':rules', m)
   } catch (e) {
     conn.reply(m.chat, 'Sorry, the menu is in error', m)
     throw e
